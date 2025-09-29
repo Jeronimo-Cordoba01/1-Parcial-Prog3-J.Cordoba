@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tienda de Frutas — 1°Parcial Programación III</title>
+    <link rel="stylesheet" href="./css/Style.css" />
+    <script defer src="./js/Main.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+    <div class="brand">
+        <h1>Fruteria Cordoba</h1>
+    </div>
+
+    <div class="nav-actions">
+        <input
+            id="filter", type="search",placeholder="Buscar fruta...", aria-label="Buscar fruta por nombre"
+        />
+    <span class="user">
+    Alumno: <span id="user-name"></span>
+    </span>
+
+        <button class="cart-button" type="button" aria-label="Abrir carrito">
+            <!-- Para poner el emoji del carrito use el boton windows + "."-->
+            <span class="cart-icon" aria-hidden="true">🛒</span>
+            <span id="cart-counter" class="cart-counter" aria-live="polite">0</span>
+        </button>
+        </div>
+    </nav>
+<main>
+<section class="container">
+    <div class="products-wrap">
+    <header class="products-header">
+        <h2>Frutas</h2>
+        <div class="sort-actions">
+        <button id="sort-name" type="button">Ordenar por nombre</button>
+        <button id="sort-price" type="button">Ordenar por precio</button>
+        </div>
+    </header>
+
+    <div class="products" id="product-list" aria-live="polite"></div>
+    </div>
+
+    <aside class="cart-container" id="cart">
+        <h2>Carrito: <span id="cart-label">0 productos</span></h2>
+
+        <ul id="cart-items" class="cart-items" aria-live="polite"></ul>
+
+        <p class="cart-total">
+            <strong>Total: $<span id="cart-total">0</span></strong>
+        </p>
+
+        <button id="empty-cart" type="button" class="btn-empty">
+            Vaciar carrito
+        </button>
+        </aside>
+    </section>
+    </main>
+
+    <footer class="footer">
+    <small>Parcial Programación III — Tienda de Frutas</small>
+    </footer>
+</body>
+</html>
