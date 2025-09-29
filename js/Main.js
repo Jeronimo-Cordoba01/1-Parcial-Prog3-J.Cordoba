@@ -224,13 +224,13 @@ function activarVaciadoCarrito() {
     mostrarCarrito();
   });
 }
-
-/*Inicio app: conecta todo al cargar */
-document.addEventListener("DOMContentLoaded", function () {
+function init() {
   imprimirDatosAlumno();
   renderProducts(productos);
   activarFiltroNombre();
   activarOrdenamientos();
   activarVaciadoCarrito();
   actualizarResumenCarrito();
-});
+};
+
+init();
